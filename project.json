@@ -1,0 +1,25 @@
+{
+ "name": "UI Test App",
+ "description": "Just trying things out",
+ "author": {
+  "name": "Geoff Johnson",
+  "email": "geoff.jay@gmail.com"
+ },
+ "version": "0.1.0",
+ "binaryname": "ui-test-app",
+ "frontend": {
+  "dir": "frontend",
+  "install": "yarn install",
+  "build": "yarn build",
+  "bridge": "src",
+  "serve": "yarn serve"
+ },
+ "tags": "",
+ "WailsVersion": "",
+ "CrossCompile": false,
+ "Platform": "",
+ "Architecture": "",
+ "LdFlags": "",
+ "GoPath": "",
+ "UseFirebug": false
+}
