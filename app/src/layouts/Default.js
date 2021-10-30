@@ -13,21 +13,23 @@ export default function Layout({ children }) {
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
-    <Box textAlign="center" fontSize="xl">
+    <Box id="layout" textAlign="center" fontSize="xl">
       <Grid minH="100vh" p={3}>
         <Sidebar
+          id="sidebar"
           variant={variants?.navigation}
           isOpen={isSidebarOpen}
           onClose={toggleSidebar}
         />
-        <Flex direction="column">
+        <Flex direction="column" ml={10}>
           <Box ml={!variants?.navigationButton}>
             <Header
+              id="header"
               showSidebarButton={variants?.navigationButton}
               onShowSidebar={toggleSidebar}
             />
           </Box>
-          <Box flex="1" h="100%">
+          <Box id="layout-body" flex="1" h="100%">
             {children}
           </Box>
         </Flex>
