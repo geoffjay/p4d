@@ -2,13 +2,10 @@ package main
 
 import (
 	_ "embed"
+	"os"
 
-	"github.com/wailsapp/wails"
+	"github.com/geoffjay/p4d/internal/app"
 )
-
-func basic() string {
-	return "World!"
-}
 
 //go:embed app/build/static/js/main.js
 var js string
@@ -17,15 +14,5 @@ var js string
 var css string
 
 func main() {
-	app := wails.CreateApp(&wails.AppConfig{
-		Width:  1024,
-		Height: 768,
-		Title:  "UI Test App",
-		JS:     js,
-		CSS:    css,
-		Colour: "#131313",
-	})
-
-	app.Bind(basic)
-	app.Run()
+	os.Exit(app.Run(js, css))
 }

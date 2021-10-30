@@ -1,45 +1,26 @@
 import React from "react";
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  extendTheme,
-} from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
-import { Logo } from "./Logo";
+import { MemoryRouter, Route, Switch } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+
+import { DefaultLayout as Layout } from "./layouts";
+import { ConfigurationPage, DashboardPage, PreferencesPage } from "./pages";
+
+import theme from "./theme";
+
 import "./App.css";
 
-import colors from "./colors";
-
 function App() {
-  const theme = extendTheme({ colors })
-
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+      <MemoryRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={DashboardPage} />
+            <Route exact path="/configuration" component={ConfigurationPage} />
+            <Route path="/preferences" component={PreferencesPage} />
+          </Switch>
+        </Layout>
+      </MemoryRouter>
     </ChakraProvider>
   );
 }
