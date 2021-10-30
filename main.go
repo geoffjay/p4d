@@ -10,10 +10,10 @@ func basic() string {
 	return "World!"
 }
 
-//go:embed frontend/build/static/js/main.js
+//go:embed app/build/static/js/main.js
 var js string
 
-//go:embed frontend/build/static/css/main.css
+//go:embed app/build/static/css/main.css
 var css string
 
 func main() {

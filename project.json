@@ -8,7 +8,7 @@
  "version": "0.1.0",
  "binaryname": "ui-test-app",
  "frontend": {
-  "dir": "frontend",
+  "dir": "app",
   "install": "yarn install",
   "build": "yarn build",
   "bridge": "src",

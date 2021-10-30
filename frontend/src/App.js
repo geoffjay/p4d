@@ -11,7 +11,6 @@ function App() {
         <p>
           Welcome to your new <code>wails/react</code> project.
         </p>
-
         <HelloWorld />
       </header>
     </div>
