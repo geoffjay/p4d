@@ -3,14 +3,14 @@ import { Box, Flex, Grid, useBreakpointValue } from "@chakra-ui/react";
 
 import { Header, Sidebar } from "../components";
 
-const smVariant = { navigation: 'drawer', navigationButton: true };
-const mdVariant = { navigation: 'sidebar', navigationButton: false };
+const smVariant = { navigation: "drawer", navigationButton: true };
+const mdVariant = { navigation: "sidebar", navigationButton: false };
 
 export default function Layout({ children }) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const variants = useBreakpointValue({ base: smVariant, md: mdVariant });
 
-  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen)
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
     <Box textAlign="center" fontSize="xl">

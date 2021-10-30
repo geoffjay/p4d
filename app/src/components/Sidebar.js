@@ -14,7 +14,6 @@ import {
   Icon,
   Link,
   Spacer,
-  VStack,
 } from "@chakra-ui/react";
 
 const SidebarContent = () => (
@@ -39,7 +38,7 @@ const SidebarContent = () => (
 );
 
 const Sidebar = ({ isOpen, variant, onClose }) => {
-  return variant === 'sidebar' ? (
+  return variant === "sidebar" ? (
     <Box
       position="fixed"
       left={0}
@@ -64,7 +63,7 @@ const Sidebar = ({ isOpen, variant, onClose }) => {
         </DrawerContent>
       </DrawerOverlay>
     </Drawer>
-  )
+  );
 };
 
 export default Sidebar;
