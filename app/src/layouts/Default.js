@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Box, Flex, Grid, useBreakpointValue } from "@chakra-ui/react";
 
 import { Header, Sidebar } from "../components";
@@ -6,7 +7,7 @@ import { Header, Sidebar } from "../components";
 const smVariant = { navigation: "drawer", navigationButton: true };
 const mdVariant = { navigation: "sidebar", navigationButton: false };
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const variants = useBreakpointValue({ base: smVariant, md: mdVariant });
 
@@ -36,4 +37,10 @@ export default function Layout({ children }) {
       </Grid>
     </Box>
   );
-}
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;

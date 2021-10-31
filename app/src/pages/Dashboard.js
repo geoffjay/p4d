@@ -4,18 +4,18 @@ import { Box } from "@chakra-ui/react";
 import { LineChart } from "../components/charts";
 import { MockTransportationData as data } from "../components/charts/mocks";
 
-export default () => {
+const Dashboard = () => {
   const [measurementData, setMeasurementData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    const { api } = window.backend;
     const fetchData = async () => {
       setIsLoading(true);
-      window.backend.api.GetMeasurementData()
-        .then(data => {
-          const measurements = JSON.parse(data);
-          setMeasurementData(measurements);
-        });
+      api.GetMeasurementData().then(data => {
+        const measurements = JSON.parse(data);
+        setMeasurementData(measurements);
+      });
     };
 
     fetchData();
@@ -29,3 +29,5 @@ export default () => {
     </Box>
   );
 };
+
+export default Dashboard;

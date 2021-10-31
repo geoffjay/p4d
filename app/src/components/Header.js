@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Box, IconButton, Flex } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -18,6 +19,11 @@ const Header = ({ showSidebarButton = true, onShowSidebar }) => {
       <Box flex="1" />
     </Flex>
   );
+};
+
+Header.propTypes = {
+  onShowSidebar: PropTypes.func.isRequired,
+  showSidebarButton: PropTypes.bool,
 };
 
 export default Header;

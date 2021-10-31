@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link as ReactLink } from "react-router-dom";
 import { DiCode } from "react-icons/di";
 import { FaCog, FaRegChartBar } from "react-icons/fa";
@@ -64,6 +65,16 @@ const Sidebar = ({ isOpen, variant, onClose }) => {
       </DrawerOverlay>
     </Drawer>
   );
+};
+
+Sidebar.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  variant: PropTypes.string,
+};
+
+Sidebar.defaultProps = {
+  variant: "sidebar",
 };
 
 export default Sidebar;
