@@ -1,19 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { ColorModeScript } from "@chakra-ui/react";
-import * as Wails from "@wailsapp/runtime";
+import Wails from "@wailsapp/runtime";
 
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
 
-import "./index.css";
+import store from "./state/store";
+
 import App from "./App";
+import "./index.css";
 
 Wails.Init(() => {
   ReactDOM.render(
     <React.StrictMode>
       <ColorModeScript />
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>,
     document.getElementById("app"),
   );

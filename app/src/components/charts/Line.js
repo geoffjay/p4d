@@ -6,8 +6,8 @@ import { ResponsiveLine } from "@nivo/line";
 import colors from "../../colors";
 import { colorspaces, theme } from "./theme";
 
-const Line = ({ axes, data, colorspace, width, height }) => (
-  <Box w={width} h={height}>
+const Line = ({ axes, data, colorspace, width, height, ...props }) => (
+  <Box w={width} h={height} {...props}>
     <ResponsiveLine
       data={data}
       theme={theme}
@@ -18,7 +18,7 @@ const Line = ({ axes, data, colorspace, width, height }) => (
         type: "linear",
         min: "auto",
         max: "auto",
-        stacked: true,
+        stacked: false,
         reverse: false,
       }}
       yFormat=" >-.2f"
@@ -47,7 +47,7 @@ const Line = ({ axes, data, colorspace, width, height }) => (
           ...axes.left,
         }
       }
-      pointSize={10}
+      pointSize={5}
       pointColor={{ theme: "background" }}
       pointBorderWidth={2}
       pointBorderColor={{ from: "serieColor" }}

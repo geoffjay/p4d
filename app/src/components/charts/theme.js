@@ -30,26 +30,26 @@ export const colorspace = [
 export const colorspaces = flattenColors();
 
 export const theme = {
-  background: colors.gray["800"],
-  textColor: colors.gray["100"],
+  background: colors.nord["4"],
+  textColor: colors.gray["600"],
   fontSize: 11,
   axis: {
     domain: {
       line: {
-        stroke: colors.blue["500"],
+        stroke: colors.gray["500"],
         strokeWidth: 1,
       },
     },
     ticks: {
       line: {
-        stroke: colors.teal["500"],
+        stroke: colors.gray["800"],
         strokeWidth: 1,
       },
     },
   },
   grid: {
     line: {
-      stroke: colors.gray["300"],
+      stroke: colors.gray["800"],
       strokeWidth: 1,
     },
   },

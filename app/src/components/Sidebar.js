@@ -21,18 +21,18 @@ const SidebarContent = () => (
   <Flex direction="column" h="100%">
     <Box h="40px">
       <Link as={ReactLink} to="/">
-        <Icon as={FaRegChartBar} w={6} h={6} color="gray.200" />
+        <Icon as={FaRegChartBar} w={6} h={6} color="gray.300" />
       </Link>
     </Box>
     <Box h="40px">
       <Link as={ReactLink} to="/configuration">
-        <Icon as={DiCode} w={6} h={6} color="gray.200" />
+        <Icon as={DiCode} w={6} h={6} color="gray.300" />
       </Link>
     </Box>
     <Spacer />
     <Box h="40px">
       <Link as={ReactLink} to="/preferences">
-        <Icon as={FaCog} w={6} h={6} color="gray.200" />
+        <Icon as={FaCog} w={6} h={6} color="gray.300" />
       </Link>
     </Box>
   </Flex>

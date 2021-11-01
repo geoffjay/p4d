@@ -17,6 +17,19 @@ const colors = {
     14: "#A3BE8C",
     15: "#B48EAD",
   },
+  frost: {
+    0: "#8FBCBB",
+    1: "#88C0D0",
+    2: "#81A1C1",
+    3: "#5E81AC",
+  },
+  aurora: {
+    0: "#BF616A",
+    1: "#D08770",
+    2: "#EBCB8B",
+    3: "#A3BE8C",
+    4: "#B48EAD",
+  },
   gray: {
     50: "#F5F7F9",
     100: "#ECEFF4",
